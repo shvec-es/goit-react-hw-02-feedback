@@ -5,6 +5,19 @@ import Statistics from 'components/Statistics';
 import Notification from 'components/Notification';
 import styled from 'styled-components';
 
+const Title = styled.h1`
+  color: SaddleBrown;
+  text-align: center;
+`;
+
+const Wrapper = styled.div`
+  border: 2px solid SaddleBrown;
+  border-radius: 5px;
+  width: 400px;
+  margin-top: 50px;
+  margin-left: 100px;
+`;
+
 class App extends Component {
   static propTypes = {};
 
@@ -34,19 +47,9 @@ class App extends Component {
     const total = this.countTotalFeedback();
     const positivePercentage = this.countPositiveFeedbackPercentage(total);
 
-    const Wrapper = styled.div`
-      border: 2px solid SaddleBrown;
-      border-radius: 5px;
-      width: 400px;
-      margin-top: 50px;
-      margin-left: 100px;
-    `;
-
     return (
       <div>
-        <h1 style={{ color: 'SaddleBrown', textAlign: 'center' }}>
-          Welcome to cafe Expresso!
-        </h1>
+        <Title>Welcome to cafe Expresso!</Title>
         <Wrapper>
           <Section title="Please leave feedback">
             <FeedbackOptions
