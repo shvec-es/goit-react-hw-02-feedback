@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 
-export const Title = styled.h1`
+const Title = styled.h1`
   color: SaddleBrown;
   text-align: center;
 `;
 
-export const Wrapper = styled.div`
+const Wrapper = styled.div`
   border: 2px solid SaddleBrown;
   border-radius: 5px;
   width: 400px;
@@ -13,16 +13,16 @@ export const Wrapper = styled.div`
   margin-left: 100px;
 `;
 
-export const TitleSection = styled(Title)`
+const TitleSection = styled(Title)`
   font-size: 1.5em;
 `;
 
-export const FeedbackWrapper = styled.div`
+const FeedbackWrapper = styled.div`
   display: flex;
   justify-content: center;
 `;
 
-export const Button = styled.button`
+const Button = styled.button`
   color: Chocolate;
   background: white;
   font-size: 1em;
@@ -41,14 +41,24 @@ export const Button = styled.button`
   }
 `;
 
-export const Report = styled.div`
+const Report = styled.div`
   font-size: 1.25em;
   padding-left: 15px;
   color: Chocolate;
 `;
 
-export const Notice = styled.p`
+const Notice = styled.p`
   font-size: 1.25em;
   text-align: center;
   color: Chocolate;
 `;
+
+export {
+  Title,
+  Wrapper,
+  TitleSection,
+  FeedbackWrapper,
+  Button,
+  Report,
+  Notice,
+};
