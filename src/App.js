@@ -3,20 +3,7 @@ import Section from 'components/Section';
 import FeedbackOptions from 'components/FeedbackOptions';
 import Statistics from 'components/Statistics';
 import Notification from 'components/Notification';
-import styled from 'styled-components';
-
-const Title = styled.h1`
-  color: SaddleBrown;
-  text-align: center;
-`;
-
-const Wrapper = styled.div`
-  border: 2px solid SaddleBrown;
-  border-radius: 5px;
-  width: 400px;
-  margin-top: 50px;
-  margin-left: 100px;
-`;
+import { Title, Wrapper } from 'styles';
 
 class App extends Component {
   static propTypes = {};
@@ -27,10 +14,9 @@ class App extends Component {
     bad: 0,
   };
 
-  handleClick = e => {
-    const { name } = e.currentTarget;
+  handleClick = feedback => {
     this.setState(prevState => {
-      return { [name]: prevState[name] + 1 };
+      return { [feedback]: prevState[feedback] + 1 };
     });
   };
 
